@@ -6,11 +6,12 @@ import Unmounting from './Unmounting';
 
 function App() {
 
-  let [showComp, setComp] = useState(true)
+  let [showComp, setComp] = useState(true);
+  let heading = "React Lifecycle";
   
   return (
     <div className="App">
-      <h1>React Lifecycle</h1>
+      <h1>{heading}</h1>  
       React component Lifecycle consists of four lifecycle phases :  
         <pre>
           1. Initialization phase
@@ -41,8 +42,8 @@ function App() {
         {showComp && <Unmounting/>}
         <button onClick={()=>{setComp(false)}}>Remove Component</button>
         </div>
+        <img alt="lifecycle" width="1000px" src="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ogimage.png"/>
     </div>
-
   );
 }
 
